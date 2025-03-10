@@ -18,11 +18,24 @@
   <style>
     /* فاصله از بالا برای جلوگیری از پوشش ناوبار ثابت */
     body {
-      margin-top: 70px;
+      margin-top: 70px; /* متناسب با ارتفاع واقعی ناوبار شما */
+      font-family: "Vazir", sans-serif;
     }
+
+    /* ناوبار فیکس‌شده */
+    nav.navbar-sticky {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background-color: #333 !important;
+      margin-bottom: 0 !important;
+    }
+
     /* هدر درباره ما */
     header#about-header {
-      background-image: url('images/realistic image of a plastic injection factory.png'); /* مسیر تصویر پس‌زمینه را بررسی کنید */
+      background-image: url('images/realistic image of a plastic injection factory.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -32,10 +45,7 @@
     }
     header#about-header .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background-color: rgba(0, 0, 0, 0.5);
     }
     header#about-header .header-content {
@@ -52,7 +62,7 @@
     header#about-header .header-content p {
       font-size: 20px;
     }
-    
+
     /* بخش درباره ما */
     .about-section {
       padding: 60px 0;
@@ -79,6 +89,38 @@
       height: auto;
       display: block;
       margin: 0 auto 10px;
+    }
+
+    /* جلوگیری از ترنزیشن ناخواسته یا گلیچ در فوتر */
+    .footer,
+    .footer a,
+    .footer .nav > li > a {
+      transition: none !important;
+    }
+    .footer-social li a {
+      background: transparent !important;
+      color: #fff !important;
+      border: none !important;
+      transition: none !important;
+    }
+    .footer-social li a:hover,
+    .footer-social li a:focus {
+      background: transparent !important;
+      color: #e60000 !important; /* یا هر رنگ دلخواه دیگر */
+      text-decoration: none !important;
+    }
+
+    /* نمونه Media Query برای موبایل (اختیاری) */
+    @media screen and (max-width: 767px) {
+      header#about-header .header-content h1 {
+        font-size: 32px; /* کوچک‌تر کردن فونت در موبایل */
+      }
+      header#about-header .header-content p {
+        font-size: 16px;
+      }
+      .about-section {
+        padding: 40px 0; /* کاهش فاصله سکشن‌ها در موبایل */
+      }
     }
   </style>
 </head>
@@ -185,7 +227,7 @@
     </div>
   </section>
   
-  <!-- فوتر (کپی شده از صفحه اصلی) -->
+  <!-- فوتر -->
   <footer class="footer padding-tb-30 primary-section-bg section-typo-white">
     <div class="container text-center">
       <p>© 2025 پلاستیک سالمی. تمامی حقوق محفوظ است.</p>

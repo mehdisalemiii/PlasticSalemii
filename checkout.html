@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ثبت سفارش | پلاستیک سالمی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS های مورد نیاز -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { direction: rtl; }
+  </style>
+</head>
+<body>
+  <!-- ناوبار -->
+  <nav class="navbar navbar-sticky" style="background-color: #333;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand primary-logo" href="index.html#home">
+          <img src="images/logo.svg" alt="پلاستیک سالمی" style="max-height: 60px;">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li><a href="index.html#home">خانه</a></li>
+          <li><a href="index.html#services">خدمات</a></li>
+          <li><a href="index.html#customers">مشتریان</a></li>
+          <li><a href="index.html#shop">فروشگاه</a></li>
+          <li><a href="account.html">پنل کاربری</a></li>
+          <li><a href="cart.html">سبد خرید</a></li>
+          <li class="active"><a href="checkout.html">ثبت سفارش</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- پایان ناوبار -->
+
+  <div class="container" style="margin-top:80px;">
+    <h1 class="text-center">ثبت سفارش</h1>
+    <form id="checkout-form">
+      <div class="row">
+        <!-- اطلاعات شخصی -->
+        <div class="col-md-6">
+          <h3>اطلاعات شخصی</h3>
+          <div class="form-group">
+            <label for="name">نام:</label>
+            <input type="text" class="form-control" id="name" placeholder="نام شما" required>
+          </div>
+          <div class="form-group">
+            <label for="email">ایمیل:</label>
+            <input type="email" class="form-control" id="email" placeholder="ایمیل شما" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">تلفن:</label>
+            <input type="text" class="form-control" id="phone" placeholder="شماره تلفن" required>
+          </div>
+        </div>
+        <!-- اطلاعات سفارش -->
+        <div class="col-md-6">
+          <h3>اطلاعات سفارش</h3>
+          <div class="form-group">
+            <label for="address">آدرس تحویل:</label>
+            <textarea class="form-control" id="address" rows="5" placeholder="آدرس کامل" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="notes">توضیحات سفارش:</label>
+            <textarea class="form-control" id="notes" rows="3" placeholder="توضیحات اضافی"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-default btn-normal">ثبت سفارش</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- فوتر -->
+  <footer class="footer" style="padding:20px; background-color:#333; color:#fff; text-align:center;">
+    <p>© 2025 پلاستیک سالمی. تمامی حقوق محفوظ است.</p>
+  </footer>
+
+  <!-- فایل‌های JS -->
+  <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
+  <script src="supabaseClient.js"></script>   
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- کد جاوااسکریپت برای ارسال فرم به Supabase (در صورت نیاز) -->
+  <script>
+    document.getElementById('checkout-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const orderData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        notes: document.getElementById('notes').value,
+        // اطلاعات مربوط به سبد خرید را نیز اضافه کنید (مثلاً آرایه‌ای از آیتم‌ها)
+      };
+
+      // مثال ارسال به Supabase (اطمینان حاصل کنید که supabaseClient.js را به صفحه اضافه کرده‌اید)
+      try {
+        const { data, error } = await supabase
+          .from('orders')
+          .insert([orderData]);
+        if (error) {
+          alert('خطا در ثبت سفارش: ' + error.message);
+        } else {
+          alert('سفارش با موفقیت ثبت شد!');
+          // پاکسازی فرم یا هدایت به صفحه‌ای دیگر
+        }
+      } catch (err) {
+        console.error(err);
+        alert('خطای ناشناخته رخ داده است.');
+      }
+    });
+  </script>
+</body>
+</html>
