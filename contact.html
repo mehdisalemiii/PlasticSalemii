@@ -15,7 +15,7 @@
     /* فاصله بالای صفحه برای جلوگیری از پوشش ناوبار ثابت */
     body {
       font-family: "Vazir", sans-serif;
-      margin-top: 80px; /* بسته به ارتفاع ناوبار شما */
+      margin-top: 80px;
     }
     /* ناوبار فیکس‌شده */
     nav.navbar-sticky {
@@ -59,7 +59,6 @@
     .contact-form button {
       margin-top: 10px;
     }
-
     /* جلوگیری از گلیچ یا تغییر رنگ در فوتر */
     .footer,
     .footer a,
@@ -75,7 +74,7 @@
     .footer-social li a:hover,
     .footer-social li a:focus {
       background: transparent !important;
-      color: #e60000 !important; /* یا هر رنگ دلخواه دیگر */
+      color: #e60000 !important;
       text-decoration: none !important;
     }
   </style>
@@ -145,7 +144,7 @@
       <!-- ستون چپ: فرم تماس -->
       <div class="col-md-7">
         <div class="contact-form">
-          <form id="contact-form" class="contact-form" action="inc/function.php" method="post">
+          <form id="contact-form" class="contact-form">
             <div class="row">
               <div class="col-md-6">
                 <input id="name" class="form-control" name="name" autocomplete="off" placeholder="نام" type="text" required>
@@ -164,6 +163,7 @@
               </div>
             </div>
           </form>
+          <p id="form-status"></p>
         </div>
       </div>
     </div>
@@ -205,9 +205,37 @@
   </footer>
 
   <!-- فایل‌های JS -->
+  <!-- بارگذاری Supabase -->
   <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
   <script src="supabaseClient.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  
+  <script>
+    // ارسال پیام تماس به جدول contact_messages در Supabase
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const fullname = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      const statusEl = document.getElementById('form-status');
+
+      const { data, error } = await supabase
+        .from('contact_messages')
+        .insert([{ fullname, email, subject, message }]);
+
+      if (error) {
+        console.error('خطا در ثبت پیام:', error);
+        statusEl.textContent = 'خطا در ارسال پیام. لطفاً دوباره تلاش کنید.';
+        statusEl.style.color = 'red';
+      } else {
+        statusEl.textContent = 'پیام شما با موفقیت ارسال شد!';
+        statusEl.style.color = 'green';
+        document.getElementById('contact-form').reset();
+      }
+    });
+  </script>
 </body>
 </html>
