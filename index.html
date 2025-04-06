@@ -50,18 +50,8 @@
     /* پس‌زمینه تیره برای ناوبار */
     .navbar {
       background-color: #333 !important;
-      margin-bottom: 0 !important; /* حذف فاصله پیش‌فرض */
-      border: none; /* حذف خط زیر ناوبار */
-    }
-
-    /* قرار دادن آیکن‌های cart و user سمت چپ لوگو */
-    .icon-nav {
-      float: left !important; /* برای راست‌به‌چپ، ممکن است نیاز شود */
-      margin-right: 10px;     /* کمی فاصله از لوگو */
-    }
-    .icon-nav li a img {
-      width: 30px; 
-      height: auto;
+      margin-bottom: 0 !important;
+      border: none;
     }
 
     /* تنظیمات بخش هدر */
@@ -84,14 +74,12 @@
       margin-bottom: 30px;
     }
 
-    /* تصاویر بخش خدمات (Service) و مشتریان (Customers) را رسپانسیو‌تر می‌کنیم */
+    /* تصاویر خدمات و مشتریان */
     .service-img, .brand-logo {
       max-width: 150px;
       margin: 0 auto;
       display: block;
     }
-
-    /* برای موبایل، ممکن است بخواهید اندازه تصاویر را حتی کوچک‌تر کنید */
     @media (max-width: 767px) {
       .service-img, .brand-logo {
         max-width: 120px;
@@ -110,20 +98,6 @@
       <div class="container">
         <!-- بخش هدر ناوبار -->
         <div class="navbar-header">
-          <!-- گروه آیکن‌های سبد خرید و پنل کاربری سمت چپ لوگو -->
-          <ul class="nav navbar-nav icon-nav">
-            <li>
-              <a href="cart.html">
-                <img src="images/cart-icon.png" alt="سبد خرید">
-              </a>
-            </li>
-            <li>
-              <a href="account.html">
-                <img src="images/user-icon.png" alt="حساب کاربری">
-              </a>
-            </li>
-          </ul>
-
           <!-- دکمه منوی موبایل -->
           <button type="button" class="navbar-toggle collapsed"
                   data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
@@ -131,7 +105,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
           <!-- لوگو -->
           <a class="navbar-brand primary-logo" href="#home">
             <img src="images/logo.svg" alt="پلاستیک سالمی">
@@ -208,7 +181,7 @@
                    class="service-img">
             </div>
             <h4 class="service-title title-bordered">تولید قطعات پلاستیکی</h4>
-            <p>توضیح کوتاه درباره تولید قطعات پلاستیکی در تیراژهای مختلف با کیفیت بالا.</p>
+            <p>تولید قطعات پلاستیکی در تیراژهای مختلف با کیفیت بالا.</p>
           </div>
 
           <!-- سرویس ۲ -->
@@ -249,7 +222,7 @@
     </section>
     <!-- End Services Section -->
     
-    <!-- Customers Section (مشتریان ما) -->
+    <!-- Customers Section -->
     <section id="customers" class="padding-bottom-50">
       <div class="container text-center">
         <div class="section-title">
@@ -257,22 +230,18 @@
           <p>برخی از برندهایی که افتخار همکاری با آن‌ها را داشته‌ایم</p>
         </div>
         <div class="row">
-          <!-- مشتری ۱: ایران خودرو دیزل -->
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/ایران_خودرو_دیزل_لوگو.jpeg" 
                  alt="ایران خودرو دیزل" class="img-responsive brand-logo">
           </div>
-          <!-- مشتری ۲: زرین دوش -->
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/زرین دوش.png" 
                  alt="زرین دوش" class="img-responsive brand-logo">
           </div>
-          <!-- مشتری ۳: لیمون -->
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/لیمون.png" 
                  alt="لیمون" class="img-responsive brand-logo">
           </div>
-          <!-- مشتری ۴: مانیا -->
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/مانیا.png" 
                  alt="مانیا" class="img-responsive brand-logo">
@@ -287,23 +256,42 @@
       <div class="container text-center">
         <div class="section-title">
           <h2 class="section-title-divider primary-divider">فروشگاه</h2>
-          <p>محصولات آماده سفارش و تولید سفارشی</p>
+          <p>برای خرید محصولات مصرفی، به صفحات فروش در دیجی کالا یا ترب مراجعه نمایید</p>
         </div>
         <div class="row">
-          <!-- محصول ۱ -->
+          <!-- محصول نمونه -->
           <div class="col-md-3 col-sm-6">
             <div class="product-box">
               <img src="images/آرم جلو سمند.jpeg" alt="محصول ۱" class="img-responsive">
               <h4>آرم جلو سمند ال ایکس</h4>
               <p>توضیحات مختصر محصول</p>
               <p class="price">قیمت: ۱۰۰,۰۰۰ تومان</p>
-              <a href="#" class="btn btn-normal">سفارش</a>
+              <!-- دکمه هدایت به فروشگاه واسطه (دیجی کالا) -->
+              <a href="https://www.digikala.com/" target="_blank" class="btn btn-normal">خرید در دیجی کالا</a>
             </div>
           </div>
+          <!-- محصولات دیگر می‌توانند به همین صورت اضافه شوند -->
         </div>
       </div>
     </section>
     <!-- End Shop Section -->
+    
+    <!-- Industrial Orders Section -->
+    <section id="industrial-orders" class="padding-bottom-50">
+      <div class="container text-center">
+        <div class="section-title">
+          <h2 class="section-title-divider primary-divider">سفارش‌های صنعتی و خدمات ویژه</h2>
+          <p>برای سفارش‌های با تیراژ بالا، طراحی قالب و خدمات صنعتی، لطفاً با ما تماس بگیرید.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>شماره تماس: <strong>09123456789</strong></p>
+            <p>یا از طریق فرم تماس، درخواست خود را ارسال کنید.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Industrial Orders Section -->
     
     <!-- Footer -->
     <footer class="footer padding-tb-30 primary-section-bg section-typo-white">
@@ -344,8 +332,6 @@
   </div><!-- End main-wrap -->
   
   <!-- JavaScript Libraries -->
-  <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
-  <script src="supabaseClient.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
