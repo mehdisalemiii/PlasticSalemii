@@ -38,6 +38,7 @@
       <p id="status-message"></p>
     </form>
   </div>
+
   <script>
     document.querySelector('#userForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -60,7 +61,7 @@
         alert('اطلاعات شما با موفقیت ذخیره شد!');
         document.getElementById('userForm').reset();
       }
-    );
+    });
   </script>
 </body>
 </html>
