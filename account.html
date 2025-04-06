@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>ایجاد حساب کاربری</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- بارگذاری کتابخانه UMD supabase -->
   <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
-  <script src="supabaseClient.js"></script>
+  <!-- بارگذاری فایل supabaseClient.js از پوشه utils -->
+  <script src="utils/supabaseClient.js"></script>
   <style>
     body {
       font-family: 'Vazir', sans-serif;
@@ -36,9 +38,11 @@
       <p id="status-message"></p>
     </form>
   </div>
+
   <script>
     document.querySelector('#userForm').addEventListener('submit', async function(e) {
       e.preventDefault();
+
       const full_name = document.getElementById('full_name').value;
       const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
