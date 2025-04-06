@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
   <script src="supabaseClient.js"></script>
-
   <style>
     body {
       font-family: 'Vazir', sans-serif;
@@ -17,9 +16,7 @@
     }
   </style>
 </head>
-
 <body>
-
   <div class="container">
     <h2 class="text-center">ایجاد حساب کاربری</h2>
     <form id="userForm">
@@ -27,46 +24,40 @@
         <label>نام و نام خانوادگی:</label>
         <input type="text" class="form-control" id="full_name" required>
       </div>
-
       <div class="form-group">
         <label>ایمیل:</label>
         <input type="email" id="email" class="form-control" required>
       </div>
-
       <div class="form-group">
         <label>شماره تماس:</label>
         <input type="tel" id="phone" class="form-control">
       </div>
-
       <button id="registerBtn" class="btn btn-primary">ثبت حساب</button>
       <p id="status-message"></p>
+    </form>
   </div>
-
   <script>
-    document.querySelector('#register').addEventListener('submit', async function(e) {
+    document.querySelector('#userForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-
       const full_name = document.getElementById('full_name').value;
       const email = document.getElementById('email').value;
       const phone = document.getElementById('phone').value;
 
-      // اطلاعات رو به Supabase میفرستیم
+      // ارسال اطلاعات به Supabase
       const { data, error } = await supabase
         .from('users')
         .insert([{ full_name, email, phone }]);
 
-      const messageEl = document.getElementById('message');
+      const messageEl = document.getElementById('status-message');
 
       if (error) {
         console.error('خطا:', error);
         alert('خطا در ثبت اطلاعات. لطفا دوباره تلاش کنید.');
       } else {
         alert('اطلاعات شما با موفقیت ذخیره شد!');
-        document.getElementById('register').reset();
+        document.getElementById('userForm').reset();
       }
     });
-  });
   </script>
-
 </body>
 </html>
