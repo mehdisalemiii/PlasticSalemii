@@ -149,7 +149,7 @@ section {
 	background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
 }
 .gray-section-bg {
-	background-color: #e2e1e0;
+	background-color: #333;
 }
 .section-parallax {
 	background-repeat:repeat;
@@ -206,232 +206,114 @@ section {
 	color:#e60000;
 }
 /* 04. Navbar Styles */
-.navbar {
-	margin-bottom:0;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-	margin: 0 auto;
-}
-.navbar-toggle {
-    background-color: transparent;
-    background-image: none;
-    height: 34px;
-    line-height: 40px;
-    position: relative;
-    width: 40px;
-	padding:7px;
-	margin: 19px 15px 0 0;
-}
-.navbar-toggle > span {
-	-webkit-transition: all ease 0.5s; 
-    -moz-transition: all ease 0.5s; 
-    -ms-transition: all ease 0.5s; 
-    -o-transition: all ease 0.5s; 
-    transition: all ease 0.5s;
-}
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-	background:transparent;
-}
-.navbar-toggle > span:first-child {
-    bottom: 45%;
-    position: absolute;
-	-webkit-transform:rotate(45deg);
-	-moz-transform:rotate(45deg);
-	-ms-transform:rotate(45deg);
-	-o-transform:rotate(45deg);
-	transform:rotate(45deg);
-}
-.navbar-toggle > span:nth-child(2) {
-   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
-   filter: alpha(opacity=0); 
-   -moz-opacity: 0; 
-   -khtml-opacity: 0; 
-   opacity: 0;
-   visibility:hidden;
-}
-.navbar-toggle.collapsed > span:nth-child(2) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
-  filter: alpha(opacity=100); 
-  -moz-opacity: 1; 
-  -khtml-opacity: 1; 
-  opacity: 1;
-   visibility:visible;
-}
-.navbar-toggle > span:last-child {
-    bottom: 45%;
-    position: absolute;
-	-webkit-transform:rotate(-45deg);
-	-moz-transform:rotate(-45deg);
-	-ms-transform:rotate(-45deg);
-	-o-transform:rotate(-45deg);
-	transform:rotate(-45deg);
-}
-.navbar-toggle.collapsed > span {
-	position:static;
-	transform: none;
-}
-.navbar-default .navbar-toggle .icon-bar,
-.navbar-transparent .navbar-toggle .icon-bar  {
-    background-color: #fff;
-}
-.navbar-toggle .icon-bar {
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
-	border-radius: 1px;
-    display: block;
-    height: 1px;
-    width: 28px;
-}
-.navbar-toggle .icon-bar + .icon-bar {
-	margin-top: 6px;
-}
-nav.navbar {
-	position:absolute;
-	top:0;
-	right:0;
-	left:0;
-	z-index: 1;
-}
-.navbar-default {
-	border:none;
-	border-bottom:solid 1px rgba(255, 255, 255, 0.1);
-}
 
-.navbar {
-	margin-bottom: 0 !important; /* حذف فاصلهٔ پیش‌فرض */
-  }
 
-  /* برای نمایش در دستگاه‌های کوچک (موبایل) */
-@media screen and (max-width: 767px) {
-	/* کاهش اندازه فونت و padding منو برای موبایل */
-	.navbar-nav > li > a {
-	  padding: 10px 5px;
-	  font-size: 14px;
-	}
-	
-	/* تنظیمات ناوبار: اگر عناصر ناوبار با هم تداخل داشتند */
-	.navbar-header {
-	  float: none;
-	}
-	.navbar-collapse {
-	  text-align: center;
-	}
-	
-	/* اطمینان از واکنش‌گرا بودن تصاویر */
-	img.img-responsive {
-	  width: 100%;
-	  height: auto;
-	}
-	
-	/* کاهش فاصله بین سکشن‌ها در موبایل */
-	section {
-	  padding: 40px 0;
-	}
+/* پاکسازی پیش‌فرض مرورگرها (اختیاری ولی توصیه‌شده) */
+/* پاکسازی اولیه (ریست ساده) */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
   }
   
-  /* برای تبلت (بین 768px تا 991px) */
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-	.navbar-nav > li > a {
-	  padding: 10px 10px;
-	  font-size: 15px;
-	}
-	section {
-	  padding: 50px 0;
-	}
+  /* تنظیمات پایه برای صفحه */
+  html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-family: "Vazir", sans-serif; /* یا هر فونت دلخواه دیگر */
+	/* اگر مایلید اولین سکشن زیر ناوبار مخفی نشود، خودتان بعداً مثلاً با margin-top به آن سکشن فاصله بدهید. */
   }
   
-.navbar-nav.navbar-center {
-	left: 50%;
-    position: absolute;
-	-webkit-transform:translateX(-50%);
-	-moz-transform:translateX(-50%);
-	-ms-transform:translateX(-50%);
-	-o-transform:translateX(-50%);
-	transform:translateX(-50%);
-}
-.navbar-brand {
-    height: 70px;
-    line-height: 70px;
-    padding: 0 20px 0 0;
-}
-.header-sticky a {
-	transition: all ease 0.35s;
-}
-a.navbar-brand.sticky-logo, .header-sticky a.navbar-brand.primary-logo {
-    height: 0;
-    width: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-.header-sticky a.navbar-brand.sticky-logo, a.navbar-brand.primary-logo {
-    height: auto;
-    width: auto;
-    opacity: 1;
-    visibility: visible;
-}
-.nav.navbar-nav > li > a {
-	height:70px;
-	line-height:70px;
-	padding:0 15px;
-	color:#fff;
-	font-size: 14px;
-	font-weight: 600;
-}
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-	margin:auto;
-}
-.navbar-brand > img {
-    display: block;
-    max-height: 100%;
-    padding: 10px 0;
-}
-.navbar.navbar-trasparent .navbar-nav > li > a:focus, .navbar.navbar-trasparent .navbar-nav > li > a:hover,
-.navbar.navbar-trasparent .navbar-nav > .active > a, .navbar.navbar-trasparent .navbar-nav > .active > a:focus, .navbar.navbar-trasparent .navbar-nav > .active > a:hover {
-	color: #e60000;
-}
-.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:focus, .navbar .navbar-nav > .active > a:hover {
-	background-color:transparent;
-}
-.navbar .navbar-nav > li > a:focus, .navbar .navbar-nav > li > a:hover,
-.navbar .navbar-nav > .active > a, .navbart .navbar-nav > .active > a:focus, .navbar .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-	color:#d6d6d6;
-	background-color:transparent;
-}
-.navbar-transparent .navbar-nav > li > a:focus, .navbar-transparent .navbar-nav > li > a:hover,
-.navbar-transparent .navbar-nav > .active > a, .navbar-transparent .navbar-nav > .active > a:focus, .navbar-transparent .navbar-nav > .active > a:hover {
-	color: #e60000;
-	background-color:transparent;
-}
-.navbar-default {
-	background-color:rgba(230, 0, 0, 0.9);
-}
-.navbar-transparent {
-	background-color:transparent;
-}
-.navbar-nav.navbar-social > li > a > i {
-    height: 70px;
-    line-height: 70px;
-}
-
-nav#main-navbar {
-	position: fixed !important;
+  /* ناوبار ثابت در بالا بدون هیچ فاصله اضافه */
+  nav.navbar-sticky {
+	position: fixed !important;  /* همیشه بالای صفحه */
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 9999; /* حتماً بیشتر از زنجیره‌ی هدر و overlay */
-	background-color: #333 !important; /* در صورت تمایل */
+	z-index: 9999;
+	background-color: #333;      /* رنگ پس‌زمینه ناوبار */
+	margin: 0 !important;        /* حذف هر حاشیه */
+	padding: 0 !important;       /* حذف هر فاصله داخلی */
+	border: none;
+	box-shadow: none !important; /* یا اگر سایه می‌خواهید، از همین‌جا تعریف کنید */
+	
+	/* در صورت وجود کدهای سه‌بعدی یا انیمیشن، آن‌ها را غیرفعال کنید */
+	transform: none !important;
+	perspective: none !important;
+	transition: none !important;
   }
-
-  body {
-	margin-top: 70px; /* یا هر عددی که با ارتفاع ناوبار همخوان باشد */
+  
+  /* ارتفاع ناوبار و لینک‌ها */
+  nav.navbar-sticky .navbar-brand,
+  nav.navbar-sticky .navbar-nav > li > a {
+	display: inline-block;
+	height: 60px;       /* ارتفاع دلخواه ناوبار */
+	line-height: 60px;  /* متن لینک‌ها در مرکز عمودی */
+	margin: 0 !important;
+	padding: 0 15px;    /* فاصله افقی از چپ و راست */
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	transition: color 0.3s ease;
   }
-
-  header#about-header .overlay {
-	/* اگر از قبل z-index داشت، مثلاً z-index: 10 بود، آن را کمتر کنید */
-	z-index: 1;
+  
+  /* لوگوی داخل ناوبار */
+  nav.navbar-sticky .navbar-brand img {
+	max-height: 60px;      /* تصویر لوگو از ناوبار بزرگ‌تر نشود */
+	vertical-align: middle;/* وسط‌چین عمودی لوگو */
   }
+  
+  /* هاور لینک‌ها */
+  nav.navbar-sticky .navbar-nav > li > a:hover,
+  nav.navbar-sticky .navbar-nav > li > a:focus {
+	color: #e60000;        /* تغییر رنگ لینک در حالت هاور */
+	text-decoration: none;
+  }
+  
+  /* منوی موبایل (در صورت استفاده از Bootstrap Collapse) */
+  .navbar-toggle, .navbar-toggler {
+	background-color: transparent !important;
+	border: none !important;
+	outline: none !important;
+	margin: 15px;
+  }
+  .navbar-toggle .icon-bar {
+	background-color: #fff;
+	width: 22px;
+	height: 2px;
+	margin: 4px auto;
+  }
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* اعمال انیمیشن به محصول‌ها در بخش فروشگاه */
+/* استایل پیشنهادی برای بزرگ‌تر کردن کادر محصولات */
+#shop .product-box {
+	background-color: #fff;           /* پس‌زمینه سفید */
+	border: 1px solid #ddd;          /* حاشیه کم‌رنگ برای تفکیک */
+	border-radius: 6px;              /* گوشه‌های کادر کمی گرد */
+	padding: 20px;                   /* افزایش فاصله داخلی با محتوای کارت */
+	margin-bottom: 30px;             /* فاصله عمودی میان کارت‌ها */
+	text-align: center;              /* متن و تصویر مرکزچین */
+	min-height: 360px;               /* حداقل ارتفاع دلخواه */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* (اختیاری) اگر خواستید افکت هاور هم داشته باشید */
+  #shop .product-box:hover {
+	transform: scale(1.03);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
 /* 05. Social Media Colors */
 /* social-pinterest */
 .navbar-default .navbar-social > li > a.social-pinterest:hover, 
@@ -650,6 +532,15 @@ header {
 .animation.visible{
 	opacity:1;
 }
+
+.brand-logo {
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .brand-logo:hover {
+	transform: scale(1.1);
+  }
+  
 /* 07. Section Title Style */
 .section-title-divider {
     margin-bottom: 20px;
@@ -864,88 +755,53 @@ blockquote::before {
     z-index: -1;
 }
 /* 10. Service box wrap */
+/* اطمینان از اینکه محتوای هر سرویس به صورت مرکز چین نمایش داده شود */
 .service-image {
-	font-size:50px;
-    margin: 0 auto;
-    vertical-align: middle;
-    width: 100px;
-	color:#e60000;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	-webkit-transition: all ease 0.5s; 
-    -moz-transition: all ease 0.5s; 
-    -ms-transition: all ease 0.5s; 
-    -o-transition: all ease 0.5s; 
-    transition: all ease 0.5s;
-}
-.service-image i {
-    display: inline-block;
-    line-height: 100px;
-	height:100px;
-	width:100px;
-    vertical-align: middle;
-}
-
-/* تنظیمات تصویر سرویس‌ها */
-.service-img {
-  max-width: 150px;     /* حداکثر عرض تصویر */
-  margin: 0 auto;       /* وسط‌چین کردن تصویر در ستون */
-  display: block;       /* اطمینان از بلاک بودن تصویر */
-}
-
-/* عنوان سرویس */
-.service-title {
-  font-size: 20px;      /* اندازه فونت عنوان */
-  margin-top: 15px;     /* کمی فاصله از تصویر */
-}
-
-/* توضیحات سرویس */
-.service-box-col p {
-  font-size: 16px;      /* اندازه فونت توضیحات */
-  line-height: 26px;    /* فاصله بین خطوط */
-}
-
-.service-title {
-	padding:14px 0;
-}
-.service-box-col:hover .service-image {
-	background-color: #e60000;
-	color: #fff;
-}
-.service-box-co {
-	margin-bottom:30px;
-}
-.service-box-col .service-title {
-	position:relative;
-}
-.service-box-col .service-title.title-bordered {
-	margin-bottom:20px;
-}
-.service-box-col .service-title.title-bordered:before {
-	background-color: #e60000;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-    bottom: -8px;
-    content: "";
-    height: 3px;
-    position: absolute;
-    width: 0;
-	left:50%;
-	-webkit-transition: all ease 0.5s; 
-    -moz-transition: all ease 0.5s; 
-    -ms-transition: all ease 0.5s; 
-    -o-transition: all ease 0.5s; 
-    transition: all ease 0.5s;
-	transform: translateX(-50%);
-}
-.service-box-col:hover .service-title.title-bordered:before {
-	width: 50px;
-}
-.service-box-col {
-    margin-bottom: 30px;
-}
+	overflow: hidden;
+  }
+  
+  /* تصاویر سرویس با اندازه کوچک‌تر */
+  .service-img {
+	width: 80%;          /* کاهش اندازه تصویر به 80% از عرض ظرف */
+	max-width: 80%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* استایل کارت سرویس */
+  .service-box-col {
+	text-align: center;
+	margin-bottom: 30px;
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  /* افکت هاور بر روی کارت سرویس */
+  .service-box-col:hover {
+	transform: translateY(-10px);
+  }
+  
+  /* افزایش انیمیشنی روی تصویر در هنگام هاور روی کارت سرویس */
+  .service-box-col:hover .service-img {
+	transform: scale(1.05); /* انیمیشن کوچک برای افزایش سایز */
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* سایه‌ی ملایم */
+  }
+  
+  /* تنظیم عنوان سرویس */
+  .service-title {
+	margin-top: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+  }
+  
+  /* تنظیم توضیحات سرویس */
+  .service-box-col p {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #666;
+  }
 /* 11. Portfolio */
 .portfolio-button-set a:active, .portfolio-button-set a:focus, .portfolio-button-set a:hover {
 	outline:none;
@@ -1137,6 +993,55 @@ blockquote::before {
 .feature-box:hover .feature-icon {
 	background-color:#333;
 }
+
+/* استایل جدید برای آیکون‌های شبکه‌های اجتماعی در فوتر */
+/* انیمیشن Fade In Up برای فوتر */
+@keyframes fadeInUp {
+	0% {
+	  opacity: 0;
+	  transform: translateY(30px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* اعمال انیمیشن به فوتر */
+  footer.footer {
+	opacity: 0;                  /* شروع با شفافیت 0 */
+	animation: fadeInUp 1s ease 0.5s forwards; 
+	/* 
+	  - 1s زمان اجرای انیمیشن 
+	  - ease منحنی سرعت
+	  - 0.5s تاخیر قبل از شروع
+	  - forwards حفظ حالت نهایی انیمیشن
+	*/
+  }
+  
+  /* دکمه‌های شبکه‌های اجتماعی با استایل گرد و انیمیشن هاور */
+  .footer-social li a {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: #444;      /* رنگ پس‌زمینه پیش‌فرض (می‌توانید تغییر دهید) */
+	line-height: 48px;
+	color: #fff;
+	text-align: center;
+	margin: 0 8px;               /* فاصله افقی بین آیکن‌ها */
+	font-size: 24px;             /* اندازه آیکن */
+	transition: all 0.3s ease;
+	/* در صورت وجود آیکن تصویری، استایل فونت ممکن است نیاز نباشد */
+  }
+  
+  /* افکت هاور: کمی بزرگ‌شدن، رنگ پس‌زمینه متفاوت و سایه */
+  .footer-social li a:hover {
+	transform: scale(1.1) rotate(3deg);
+	background-color: #e60000;   /* تغییر رنگ پس‌زمینه هنگام هاور */
+	color: #fff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
 /* 15. Team Styles */
 .team-wrap {
 	margin-bottom:30px;
