@@ -17,7 +17,7 @@
       font-family: "Vazir", sans-serif;
       margin-top: 80px;
     }
-    /* ناوبار فیکس‌شده */
+    /* (اگر تغییراتی در استایل ناوبار مورد نیاز است، در فایل style.css یا در اینجا اعمال شود) */
     nav.navbar-sticky {
       position: fixed !important;
       top: 0;
@@ -80,36 +80,10 @@
   </style>
 </head>
 <body data-spy="scroll" data-offset="62">
-
-  <!-- ناوبار (فیکس‌شده) -->
-  <nav id="main-navbar" class="navbar navbar-sticky">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- دکمه منوی موبایل -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- لوگو -->
-        <a class="navbar-brand primary-logo" href="index.html">
-          <img src="images/logo.svg" alt="پلاستیک سالمی" style="max-height: 60px;">
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="main-navbar-collapse">
-        <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="index.html#home">خانه</a></li>
-          <li><a href="index.html#services">خدمات</a></li>
-          <li><a href="index.html#customers">مشتریان ما</a></li>
-          <li><a href="index.html#shop">فروشگاه</a></li>
-          <li><a href="about_us.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس با ما</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- پایان ناوبار -->
-
+  
+  <!-- container برای بارگذاری ناوبار (از فایل navbar.html) -->
+  <div id="navbar-container"></div>
+  
   <!-- محتوای صفحه تماس -->
   <div class="container contact-page">
     <div class="row text-center">
@@ -170,39 +144,69 @@
   </div>
 
   <!-- فوتر (با اصلاحات جلوگیری از گلیچ) -->
-  <footer class="footer padding-tb-30 primary-section-bg section-typo-white">
-    <div class="container text-center">
-      <div class="row text-center margin-bottom-20">
-        <div class="col-md-12">
-          <ul class="nav navbar-nav footer-social">
-            <li>
-              <a href="#" onclick="event.preventDefault();" style="display:inline-block;">
-                <img src="images/facebook-icon.png" alt="Facebook" style="width:30px; height:auto;">
-              </a>
-            </li>
-            <li>
-              <a href="#" onclick="event.preventDefault();" style="display:inline-block;">
-                <img src="images/instagram-icon.png" alt="Instagram" style="width:30px; height:auto;">
-              </a>
-            </li>
-            <li>
-              <a href="#" onclick="event.preventDefault();" style="display:inline-block;">
-                <img src="images/twitter-icon.png" alt="Twitter" style="width:30px; height:auto;">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <p class="copyright-text">
-            تمامی حقوق محفوظ است © 2025 پلاستیک سالمی
-          </p>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
-  </footer>
+<!-- فوتر با پس‌زمینه تیره و طراحی مینیمال -->
+<footer class="footer-minimal-dark">
+  <div class="container text-center">
+    <!-- آیکون‌های شبکه‌های اجتماعی -->
+    <ul class="social-icons">
+      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+      <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+    </ul>
+    
+    <!-- متن کپی‌رایت -->
+    <p>
+      تمامی حقوق محفوظ است © 
+      <span id="current-year">۲۰۲۵</span> 
+      پلاستیک سالمی
+    </p>
+  </div>
+</footer>
+
+<style>
+/* استایل فوتر مینیمال با پس‌زمینه تیره */
+.footer-minimal-dark {
+  background-color: #333;  /* پس‌زمینه تیره */
+  color: #fff;            /* متن سفید */
+  padding: 20px 0;        /* فاصله عمودی بالا و پایین فوتر */
+  font-size: 14px;
+}
+
+.footer-minimal-dark .social-icons {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-minimal-dark .social-icons li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+/* رنگ پیش‌فرض آیکون‌ها سفید؛ و هاور با رنگ قرمز */
+.footer-minimal-dark .social-icons li a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-minimal-dark .social-icons li a:hover {
+  color: #e60000;    /* تغییر رنگ هنگام هاور */
+  transform: scale(1.2) translateY(-2px);
+}
+
+/* حذف فاصله اضافی از متن کپی‌رایت */
+.footer-minimal-dark p {
+  margin: 0;
+}
+</style>
+
+<script>
+  // نمایش سال جاری در بخش کپی‌رایت
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+    <!-- End Footer -->
 
   <!-- فایل‌های JS -->
   <!-- بارگذاری Supabase -->
@@ -236,6 +240,47 @@
         document.getElementById('contact-form').reset();
       }
     });
+  </script>
+  
+  <!-- اسکریپت بارگذاری ناوبار از فایل navbar.html -->
+  <script>
+    function initNavbar() {
+      const navbarLinks = document.querySelectorAll('#main-navbar a');
+      navbarLinks.forEach(function(link) {
+        link.addEventListener("click", function(e) {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith("#")) {
+            const target = document.querySelector(href);
+            if (!target) {
+              e.preventDefault();
+              window.location.href = "index.html" + href;
+            } else {
+              e.preventDefault();
+              window.scrollTo({
+                top: target.offsetTop - 70,
+                behavior: "smooth"
+              });
+            }
+          }
+        });
+      });
+    }
+  
+    // بارگذاری ناوبار از فایل navbar.html و سپس اجرای initNavbar
+    fetch('navbar.html')
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error('خطا در بارگذاری فایل ناوبار');
+        }
+        return response.text();
+      })
+      .then(function(data) {
+        document.getElementById('navbar-container').innerHTML = data;
+        initNavbar();
+      })
+      .catch(function(err) {
+        console.error('Error loading navbar:', err);
+      });
   </script>
 </body>
 </html>
