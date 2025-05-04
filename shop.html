@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فروشگاه | پلاستیک سالمی</title>
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- توضیحات متا -->
+  <meta name="description" content="فروشگاه محصولات پلاستیک سالمی">
+  <meta name="author" content="پلاستیک سالمی">
+  <!-- CSS‌های Bootstrap، Font-Awesome و استایل اصلی -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { margin-top: 70px; font-family: "Vazir", sans-serif; }
+    .shop-section { padding: 120px 0 80px; text-align: center; }
+    .shop-section .section-title { text-align: center; margin-bottom: 20px; font-size: 2.25rem; }
+    .shop-section .section-subtitle { text-align: center; margin-bottom: 40px; color: #666; }
+    .product-box { background: #fff; border: 1px solid #eee; border-radius: 6px; padding: 15px; text-align: center; margin-bottom: 30px; transition: transform .2s; }
+    .product-box:hover { transform: translateY(-5px); }
+    .product-box img { max-width: 100%; height: auto; margin-bottom: 15px; }
+    .product-box h4 { font-size: 1.1rem; margin-bottom: 10px; color: #333; }
+    .product-box p { margin-bottom: 8px; color: #555; }
+    .product-box .price { font-weight: bold; color: #e60000; }
+    .btn-normal { display: inline-block; padding: 8px 16px; background: transparent; border: 1px solid #e60000; border-radius: 4px; color: #e60000; transition: background .2s, color .2s; }
+    .btn-normal:hover { background: #e60000; color: #fff; text-decoration: none; }
+    .footer-minimal-dark { background-color: #333; color: #fff; padding: 20px 0; font-size: 14px; }
+    .footer-minimal-dark .social-icons { list-style: none; padding: 0; margin: 0 0 10px; text-align: center; }
+    .footer-minimal-dark .social-icons li { display: inline-block; margin: 0 8px; }
+    .footer-minimal-dark .social-icons li a { color: #fff; font-size: 18px; transition: color .3s, transform .3s; }
+    .footer-minimal-dark .social-icons li a:hover { color: #e60000; transform: scale(1.2) translateY(-2px); }
+       .footer-minimal-dark p { margin: 0; text-align: center; }
+    /* btn-box wrapper style */
+    .btn-box { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #e74c3c; border-radius: 0.5rem; transition: background 0.2s, border-color 0.2s; }
+    .btn-box:hover { background: #e74c3c; border-color: #e74c3c; }
+    .btn-box .btn { color: #e74c3c; background: transparent; }
+    .btn-box:hover .btn { color: #fff; }
+  </style>
+</head>
+<body data-spy="scroll" data-offset="70">
+  <!-- بارگذاری دینامیک ناوبار -->
+  <div id="navbar-container"></div>
+
+  <!-- بخش فروشگاه -->
+  <section class="shop-section">
+    <div class="container text-center">
+      <h2 class="section-title text-center">فروشگاه محصولات</h2>
+      <div class="section-divider"><span></span><div class="dot"></div><span></span></div>
+      <p class="section-subtitle">برای مشاهده جزئیات و خرید، روی محصول موردنظر کلیک کنید.</p>
+        <!-- تکرار این بلوک برای هر محصول -->
+        <!-- محصول ۱ -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-box">
+            <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
+              <img src="images/آرم جلو سمند.png" alt="آرم جلو سمند ال ایکس">
+              <h4>آرم جلو سمند ال ایکس</h4>
+            </a>
+            <p>توضیحات مختصر محصول</p>
+            <p class="price">قیمت: ۱۰۰,۰۰۰ تومان</p>
+            <a href="https://www.digikala.com/product/1" target="_blank" class="btn-normal">خرید در دیجی‌کالا</a>
+          </div>
+        </div>
+        <!-- محصول ۲ -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-box">
+            <a href="https://www.digikala.com/product/2" target="_blank" rel="noopener">
+              <img src="images/آرم جلو سمند.png" alt="آرم جلو سمند ال ایکس">
+              <h4>آرم جلو سمند ال ایکس</h4>
+            </a>
+            <p>توضیحات مختصر محصول</p>
+            <p class="price">قیمت: ۱۰۰,۰۰۰ تومان</p>
+            <a href="https://www.digikala.com/product/2" target="_blank" class="btn-normal">خرید در دیجی‌کالا</a>
+          </div>
+        </div>
+        <!-- محصول ۳ -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-box">
+            <a href="https://www.digikala.com/product/3" target="_blank" rel="noopener">
+              <img src="images/آرم جلو سمند.png" alt="آرم جلو سمند ال ایکس">
+              <h4>آرم جلو سمند ال ایکس</h4>
+            </a>
+            <p>توضیحات مختصر محصول</p>
+            <p class="price">قیمت: ۱۰۰,۰۰۰ تومان</p>
+            <a href="https://www.digikala.com/product/3" target="_blank" class="btn-normal">خرید در دیجی‌کالا</a>
+          </div>
+        </div>
+        <!-- محصول ۴ -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-box">
+            <a href="https://www.digikala.com/product/4" target="_blank" rel="noopener">
+              <img src="images/آرم جلو سمند.png" alt="آرم جلو سمند ال ایکس">
+              <h4>آرم جلو سمند ال ایکس</h4>
+            </a>
+            <p>توضیحات مختصر محصول</p>
+            <p class="price">قیمت: ۱۰۰,۰۰۰ تومان</p>
+            <a href="https://www.digikala.com/product/4" target="_blank" class="btn-normal">خرید در دیجی‌کالا</a>
+          </div>
+        </div>
+        <!-- ... ادامه تا محصول 10 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer مینیمال -->
+  <footer class="footer-minimal-dark">
+    <div class="container">
+      <ul class="social-icons">
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+        <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+      </ul>
+      <p>تمامی حقوق © <span id="current-year"></span> پلاستیک سالمی محفوظ است.</p>
+    </div>
+  </footer>
+
+  <!-- اسکریپت‌های JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    // نمایش سال جاری
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // بارگذاری ناوبار و تنظیم اسکرول روان
+    function initNavbar() {
+      document.querySelectorAll('#main-navbar a').forEach(link => {
+        link.addEventListener('click', e => {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+            } else {
+              e.preventDefault();
+              window.location.href = 'index.html' + href;
+            }
+          }
+        });
+      });
+    }
+    fetch('navbar.html')
+      .then(res => res.ok ? res.text() : Promise.reject('خطا در بارگذاری ناوبار'))
+      .then(html => { document.getElementById('navbar-container').innerHTML = html; initNavbar(); })
+      .catch(console.error);
+  </script>
+</body>
+</html>
