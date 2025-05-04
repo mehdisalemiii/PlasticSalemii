@@ -754,6 +754,8 @@ blockquote::before {
     width: 50px;
     z-index: -1;
 }
+
+
 /* 10. Service box wrap */
 /* اطمینان از اینکه محتوای هر سرویس به صورت مرکز چین نمایش داده شود */
 .service-image {
@@ -860,6 +862,91 @@ blockquote::before {
     opacity: 1;
 	visibility:visible;
 }
+
+
+.products-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 1rem;
+	margin-top: 1rem;
+  }
+  .product-card {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: .5rem;
+	padding: .75rem;
+	text-align: center;
+	transition: transform .2s;
+  }
+  .product-card:hover {
+	transform: translateY(-4px);
+  }
+  .shop-preview-link {
+	text-align: center;
+	margin-top: 1.5rem;
+  }
+  .shop-preview-link .btn {
+	display: inline-block;
+	padding: .5rem 1rem;
+	border: 1px solid #e60000;
+	border-radius: .25rem;
+	color: #e60000;
+	text-decoration: none;
+	transition: background .2s, color .2s;
+  }
+  .shop-preview-link .btn:hover {
+	background: #e60000;
+	color: #fff;
+  }
+
+  .section-container {
+	padding: 60px 0;
+  }
+  .section-title {
+	font-size: 2rem;
+	margin-bottom: .5rem;
+	position: relative;
+	display: inline-block;
+  }
+  .section-divider {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	margin: .5rem auto 1rem;
+	width: 100px;
+  }
+  .section-divider span {
+	flex: 1;
+	height: 2px;
+	background: #e74c3c;
+  }
+  .section-divider .dot {
+	width: 8px;
+	height: 8px;
+	background: #e74c3c;
+	border-radius: 50%;
+  }
+  .section-subtitle {
+	color: #666;
+	margin-bottom: 2rem;
+  }
+  .products-grid .product-card {
+	text-align: center;
+	margin-bottom: 1.5rem;
+  }
+  .products-grid .product-card img {
+	max-width: 100%;
+	border-radius: .5rem;
+	transition: transform .2s;
+  }
+  .products-grid .product-card img:hover {
+	transform: translateY(-5px);
+  }
+  .shop-preview-link .btn {
+	padding: .5rem 1.5rem;
+  }
+  
 /* 12. Pricing Table */
 .price-main {
 	-webkit-border-radius: 5px;
@@ -1019,6 +1106,33 @@ blockquote::before {
 	*/
   }
   
+  .btn-box {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border: 1px solid #e60000;
+	border-radius: 0.5rem;
+	transition: background 0.2s, border-color 0.2s;
+  }
+  
+  /* افکت هاور برای باکس */
+  .btn-box:hover {
+	background: #e60000;
+	border-color: #e60000;
+  }
+  
+  /* وقتی ماوس روی باکس است، دکمه روشن شود */
+  .btn-box:hover .btn {
+	background: transparent;
+	color: #fff;
+  }
+
+  .preview-img {
+	max-height: 200px;
+	object-fit: contain;
+	margin: 0 auto;
+	padding: 1rem;
+  }
+
   /* دکمه‌های شبکه‌های اجتماعی با استایل گرد و انیمیشن هاور */
   .footer-social li a {
 	display: inline-block;
