@@ -1105,7 +1105,47 @@ blockquote::before {
 	  - forwards حفظ حالت نهایی انیمیشن
 	*/
   }
-  
+  .image-slider {
+	position: relative;
+	overflow: hidden;
+	height: 240px; /* یا هر ارتفاع مناسب برای محصول */
+  }
+  .image-slider img.preview-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	z-index: 0;
+  }
+  .image-slider img.preview-img.active {
+	opacity: 1;
+	z-index: 1;
+	position: relative;
+  }
+  .image-slider .dots {
+	text-align: center;
+	margin-top: 8px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row-reverse; /* این خط اضافه بشه */
+	gap: 6px;
+  }
+  .image-slider .dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 3px;
+	background-color: #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+  .image-slider .dot.active {
+	background-color: #e60000;
+  }
   .btn-box {
 	display: inline-block;
 	padding: 0.5rem 1rem;
