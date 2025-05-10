@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>پلاستیک سالمی | کارگاه تزریق پلاستیک</title>
   <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/script.js" as="script">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- توضیحات متا -->
@@ -14,6 +16,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+  
   
   <!-- استایل سفارشی برای ناوبار، هدر و دکمه -->
   <style>
@@ -183,7 +186,7 @@
     <!-- پایان ناوبار -->
     
     <!-- هدر (Hero Section) -->
-    <header id="home" style="background-image: url('images/realistic image of a plastic injection factory.png');">
+    <header id="home" style="background-image: url('images/realistic image of a plastic injection factory.webp');loading="lazy">
       <div class="overlay"></div>
       <div class="header-container">
         <div class="header-content-inner">
@@ -225,7 +228,7 @@
           <!-- سرویس ۱ -->
           <div class="col-md-3 col-sm-6 service-box-col">
             <div class="service-image">
-              <img src="images/تولید قطعات پلاستیکی به سفارش مشتری.png"
+              <img src="images/تولید قطعات پلاستیکی به سفارش مشتری.webp"
                    alt="تولید قطعات پلاستیکی"
                    class="service-img">
             </div>
@@ -236,7 +239,7 @@
           <!-- سرویس ۲ -->
           <div class="col-md-3 col-sm-6 service-box-col">
             <div class="service-image">
-              <img src="images/تولید قطعات خودرویی و لوازم خانگی.png"
+              <img src="images/تولید قطعات خودرویی و لوازم خانگی.webp"
                    alt="قطعات خودرویی و خانگی"
                    class="service-img">
             </div>
@@ -248,8 +251,9 @@
           <!-- سرویس ۳ -->
           <div class="col-md-3 col-sm-6 service-box-col">
             <div class="service-image">
-              <img src="images/طراحی و ساخت قالب_های تزریق پلاستیک.png"
+              <img src="images/طراحی و ساخت قالب_های تزریق پلاستیک.webp "
                    alt="طراحی و ساخت قالب"
+                   loading="lazy"
                    class="service-img">
             </div>
             <h4 class="service-title title-bordered">طراحی و ساخت قالب</h4>
@@ -259,8 +263,9 @@
           <!-- سرویس ۴ -->
           <div class="col-md-3 col-sm-6 service-box-col">
             <div class="service-image">
-              <img src="images/مشاوره در زمینه طراحی و تولید قطعات پلاستیکی.png"
+              <img src="images/مشاوره در زمینه طراحی و تولید قطعات پلاستیکی.webp"
                    alt="مشاوره تولید"
+                   loading="lazy"
                    class="service-img">
             </div>
             <h4 class="service-title title-bordered">مشاوره تولید</h4>
@@ -282,19 +287,19 @@
         <div class="row">
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/ایران_خودرو_دیزل_لوگو.png" 
-                 alt="ایران خودرو دیزل" class="img-responsive brand-logo">
+                 alt="ایران خودرو دیزل" class="img-responsive brand-logo loading="lazy"">
           </div>
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/زرین دوش.png" 
-                 alt="زرین دوش" class="img-responsive brand-logo">
+                 alt="زرین دوش" class="img-responsive brand-logo loading="lazy"">
           </div>
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/لیمون.png" 
-                 alt="لیمون" class="img-responsive brand-logo">
+                 alt="لیمون" class="img-responsive brand-logo loading="lazy"">
           </div>
           <div class="col-md-3 col-sm-6 margin-bottom-30">
             <img src="images/مانیا.png" 
-                 alt="مانیا" class="img-responsive brand-logo">
+                 alt="مانیا" class="img-responsive brand-logo loading="lazy"">
           </div>
         </div>
       </div>
@@ -312,120 +317,158 @@
   <div class="container">
     <div class="row justify-content-center">
       <!-- محصول 1 -->
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\آرم جلو سمند.webp"" class="card-img-top preview-img active" alt="آرم جلو سمند ال ایکس" loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
+      <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\سر دنده ی طرح اصلی L90.webp" class="card-img-top preview-img active" loading="lazy">
+    <img src="images\shop\سر دنده ی طرح اصلی L90-2 .webp" class="card-img-top preview-img"  loading="lazy">
+    <img src="images/shop/سر دنده ی طرح اصلی L90-3.webp" class="card-img-top preview-img" style="display: none;" alt="سر دنده L90 - نمای سوم" loading="lazy">
+
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+        <span class="dot" onclick="showSlide(this, 1)"></span>
+        <span class="dot" onclick="showSlide(this, 2)"></span> <!-- این خط اضافه شده -->
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">سر دنده طرح اصلی L90</h5>
+      <p class="card-text text-muted">سر دنده مخصوص خودروی ال ۹۰، طرح اصلی</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\دستگیره بیرونی هیوندای هایس.webp" class="card-img-top preview-img active"  loading="lazy">
+    <img src="images\shop\دستگیره بیرونی هیوندای هایس-2.webp" class="card-img-top preview-img"  loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+        <span class="dot" onclick="showSlide(this, 1)"></span>
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">دستگیره بیرونی هیوندای هایس</h5>
+      <p class="card-text text-muted">دستگیره بیرونی مخصوص هیوندای هایس</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\قاب چراغ کوچک اتوبوس 457 شهری.webp" class="card-img-top preview-img active"  loading="lazy">
+    <img src="images\shop\قاب چراغ کوچک اتوبوس 457 شهری-2.webp" class="card-img-top preview-img"  loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+        <span class="dot" onclick="showSlide(this, 1)"></span>
       </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card product-card h-100 border-0 shadow-sm">
-          <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" rel="noopener">
-            <img src="images/آرم جلو سمند.png" class="card-img-top preview-img" alt="آرم جلو سمند ال ایکس">
-          </a>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">آرم جلو سمند ال ایکس</h5>
-            <p class="card-text text-muted">آرم جلو مخصوص خودروی سمند LX</p>
-            <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
-              <a href="https://www.digikala.com/product/dkp-19099184/آرم-جلو-خودرو-طرح-اسب-مناسب-سمند-lx/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">قاب چراغ کوچک اتوبوس 457 شهری.webp</h5>
+      <p class="card-text text-muted"> (پشت اتوبوس)قاب چراغ کوچک اتوبوس 457 شهری.webp</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
       </div>
-      
-      <!-- ... محصولات دیگر -->
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\بست بغل تانک باد (مخصوص واگن هود).webp" class="card-img-top preview-img active" alt="آرم جلو سمند ال ایکس" loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+      </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">بست بغل تانک باد </h5>
+      <p class="card-text text-muted">بست بغل تانک باد (مخصوص واگن هود)</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\کشویی دو ریل.webp" class="card-img-top preview-img active"  loading="lazy">
+    <img src="images\shop\کشویی دو ریل-2.webp" class="card-img-top preview-img"  loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+        <span class="dot" onclick="showSlide(this, 1)"></span>
+      </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">کشویی دو ریل</h5>
+      <p class="card-text text-muted">کشویی دو ریل</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\دستگیره نگهدارنده داخل.webp" class="card-img-top preview-img active"  loading="lazy">
+    <img src="images\shop\دستگیره نگهدارنده داخل-2.webp" class="card-img-top preview-img"  loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+        <span class="dot" onclick="showSlide(this, 1)"></span>
+      </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">دستگیره نگهدارنده داخل</h5>
+      <p class="card-text text-muted">دستگیره نگهدارنده داخل</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+  <div class="card product-card h-100 border-0 shadow-sm">
+    <div class="image-slider position-relative text-center">
+    <img src="images\shop\دستگیره نگهدارنده اتوبوس.webp" class="card-img-top preview-img active"  loading="lazy">
+    <img src="images\shop\دستگیره نگهدارنده اتوبوس-2.webp" class="card-img-top preview-img" loading="lazy">
+      <div class="dots mt-2">
+        <span class="dot active" onclick="showSlide(this, 0)"></span>
+        <span class="dot" onclick="showSlide(this, 1)"></span>
+      </div>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title mb-1">دستگیره نگهدارنده اتوبوس</h5>
+      <p class="card-text text-muted">دستگیره نگهدارنده اتوبوس</p>
+      <div class="btn-box" style="display:inline-block;padding:.25rem .5rem;border:1px solid #e74c3c;border-radius:.25rem;">
+        <a href="https://www.digikala.com/product/dkp-19099184/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">خرید در دیجی‌کالا</a>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
     <div class="text-center mt-4">
       <div class="btn-box">
@@ -544,5 +587,21 @@
       }, 300);
     });
   </script>
+<script>
+function showSlide(dot, index) {
+  const slider = dot.closest(".image-slider");
+  const images = slider.querySelectorAll(".preview-img");
+  const dots = slider.querySelectorAll(".dot");
+
+  images.forEach((img, i) => {
+    img.style.display = i === index ? "block" : "none";
+    img.classList.toggle("active", i === index);
+  });
+
+  dots.forEach((d, i) => {
+    d.classList.toggle("active", i === index);
+  });
+}
+</script>
 </body>
 </html>
